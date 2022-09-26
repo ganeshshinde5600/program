@@ -1,1 +1,272 @@
-
+package progusingjava;
+//DO NOT MODIFY THE CODE PROVIDED TO YOU 
+4 
+Verify 
+public class Customer { 
+private String mobNum 
+private String custName; 
+public Customer (String mobNum, String custName){ this.mobNum=mobNum 
+this.custName=custName 
+6 
+7 
+8 V 
+9 A 10 
+11 
+public String getMobNum () 
+return this.mobNum; 
+12 
+13 
+14 
+Public String getCustName() { 
+return this.custName 
+15 
+16 
+7 
+@Override 
+public String tostring() { 
+return "Customer (mobNum-+ this.mobNum + CustName=" + this. custName +")" 
+18 
+19 
+20 
+21 
+/T 
+public Boolean validateCustDetails () 
+22 Trainees 
+23 
+24 
+/mplement your 1ogic here 
+ifmobNum. 1ength()!-10) 
+return false; 
+25 
+26 
+27 
+28 
+if(mobNum.charAt(0)7TmobNum.charAt(0)8mobNum.charAt(0)-="9'){ 
+return true 
+29 
+I/Change the return statement accondingly 
+return false B4 
+o 35 
+Customer.java RentalService.java launch.json Reference Question BusRentalService.java settings.json index.html x 
+package progusingjava; 
+//DO NOT MODIFY THE CODE PROVIDED TO YOU 
+4 
+Verify 
+public abstract class RentalService 
+private String orderId; 
+private int no0fDays 
+private double billAmount S 
+private Customer customers
+private static int counter 10003 
+8 
+9 2 10 
+11 
+12 public RentalService(int no0fDays,Customer customer) 
+13 
+this.no0fDays=no0fDays 
+this.customer=customerr 
+14 
+15 
+16 
+17 
+public double getBillAmount () { 
+return this.billAmount; 
+18 
+19 
+20 
+21 
+public void setBil1Amount (double billAmount) { 
+this.billAmount billAmount; 
+22 
+23 
+24 
+25 
+public Customer getCustomer () { 
+return this.customerl 
+26 
+27 
+28 
+29 
+public String getorderId() { 
+return this.orderId; 
+30 
+31 
+32 
+33 
+public void setorderId(String orderId) { 
+this.orderId = orderId; 
+34 
+35 
+36 
+38 RentalService.java x public int getNoOfDays () { 39 return this.no0fDays; 
+40 
+41 
+42 //To Trainees 
+43 public void generateOrderId () 
+44 
+45 
+46 //Implement your logic here 
+47 counter+; 
+48 String oId = "B" + counter; 
+49 this.orderId=oId 
+50 
+51 
+52 
+Override 
+public tring tostring (){ return "RentalService (noofDays-" +this.no0fDays+ ", Customer=" + this . customer ")"; 
+53 
+54 
+55 
+56 
+57 public abstract void calculateTotalBil11(); 
+58 
+Question BusRentalService.java xsettings.json index.html Customer.java RentalService.java launch json 
+ence 
+1 package progusingjava; 
+3 //DO NOT MODIFY THE CODE PROVIDED TO YOU 
+4 
+Verify 
+public class BusRentalService extends RentalService{ 
+private static String[] busTypeArr= {"Ac-Sleeper", "Ac-Semisleeper", "NonAc-Sleeper", "NonAc-SemiSleeper" 
+private static int[] perDayRentArr={4000, 3000, 2000,1000}; 
+8 private String bustype; 
+9 
+public BusRental Service(int noofDays, Customer customer, String busType 
+super(noofDays, customer) 
+this.busType=busType; 
+10 
+11 
+12 
+13 
+14 
+public String getBusType() { 
+return this.busTypes 
+15 
+16 
+17 
+18 
+@Override 
+public String tostring() { 
+return BusRentalService (no0fDays=" + this.getNo0fDays() + " Customer=" + this.getCustomer() +", busType= "+ this.busType+")"; 
+19 
+20 
+21 
+22 
+23 
+//To Trainees 
+public Integer identifyPerDayRent () 
+24 
+25 
+26 
+/Implement your logic here 
+int rentperDay-0; int flag-0 
+for(int i-0;ikbusTypeArr. length;it+){ if(busType.equalsIgnoreCase(bus TypeArr[il)){, 
+flag 1 
+rentperDay perDayRentArr[i]: 
+breaks 
+27 
+28 
+29 
+30 
+31 
+32 
+33 
+34 
+35 
+36 Debua (l aunchl. urront Eilo NilDMiczNGO3MWISMiFNmEAMmViNz7hlHBvdHRhl nNhbnRvc2g- 00:26:40 Ln 62, Col 21 LF UT 
+settings.json index.htm Custormer.java RentalSenvice.java launch.json seierence Question BusRentalService.java x 
+rentperDay=perDayRentArr[il; 33 
+34 break; 
+35 
+36 
+37 
+38 if(flag-=0) 
+39 rentperDay=-1; 
+40 
+I/Change the return statement accordingly 
+return rentperDay; 
+41 
+42 
+43 
+44 
+45 I/To Trainees 
+46 public void calculateTotalBill() 
+47 
+48 
+//Implement your logic here 
+boolean custValidation getCustomer().validateCustDetails(); 
+if(custvalidation&&getNoofDays ()>0) 
+int perDayRent identifyPerDayRent () 
+49 
+50 
+51 
+52 
+53 
+if(perDayRent--1) 
+setorderId( "NA"); 
+setBillAmount(-1.0) 
+54 
+55 
+56 
+57 
+else 
+generateorderId (); 
+double amt perDayRent*getNo0fDays (); 
+58 
+59 
+60 
+61 
+62 if(amt>-pooo) 
+63 amt amt amtx0.O53 
+64 
+65 
+66 setBill Amount (amt); 67 
+68 
+69 
+KeiercGE Quesion BusRentalService.java x seiings.json index.htm Customer. java RentalService.java launchj 
+53 
+if (perDayRent-=-1){ 
+setorderId( "NA"); 
+setBillAmount(-1.0); 
+54 
+55 
+56 
+57 
+58 else{ 
+generateOrderId); 
+double amt = perDayRent*getNoofDays() 
+59 
+60 
+61 
+62 if (amt>=3000) { 
+amt = amt - amt*0.05; 63 
+64 
+65 
+66 setBillAmount (amt); 
+67 
+68 
+69 
+el se{ 
+setorderId("NA"); 
+setBillAmount (-1.0); 
+70 
+71 
+72 
+73 
+74 
+75 
+76 
+Submit x 
+Submission successfull! 100% Submit again, if changes are made. 
+Hide Details (24/24) 
+progusingjava BusRentalServ... progusingijava Customer.java progusingjava RentalService.. 
+Non Assessed 8/8 test case passed 
+Non Assessed 
+3/3 test case passed 
+Non Assessed 
+1/1 test case passed 
+Assessed 
+17/17 test case passed 
+Assessed 
+6/6 test case passed 
+Assessed
